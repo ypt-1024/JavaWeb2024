@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-	version="4.0">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
 
-	<servlet>
-		<servlet-name>TestServlet</servlet-name>
-		<servlet-class>com.this0.servlet.Hello.TestServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>TestServlet</servlet-name>
-		<url-pattern>/fruit</url-pattern>
-	</servlet-mapping>
+<!--    <servlet>-->
+<!--        <servlet-name>TestServlet</servlet-name>-->
+<!--        <servlet-class>com.this0.servlet.Hello.TestServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>TestServlet</servlet-name>-->
+<!--        &lt;!&ndash;		可以为一个Servlet匹配多个不同的映射路径,但是不同的Servlet不能使用相同的url-pattern&ndash;&gt;-->
+<!--        <url-pattern>/fruit</url-pattern>-->
+<!--        &lt;!&ndash;-->
+<!--            /        表示通配所有资源,不包括jsp文件-->
+<!--            /*       表示通配所有资源,包括jsp文件-->
+<!--            /a/*     匹配所有以a前缀的映射路径-->
+<!--            *.action 匹配所有以action为后缀的映射路径-->
+<!--        &ndash;&gt;-->
+<!--    </servlet-mapping>-->
 </web-app>
