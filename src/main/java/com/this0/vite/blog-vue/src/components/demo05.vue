@@ -1,29 +1,36 @@
 <script type="module" setup>
-/* 从vue中引入ref方法 */
-import { ref } from 'vue'
-let counter = ref(0)
+/* 从vue中引入reactive方法 */
+import {ref, reactive} from 'vue'
+
+let data = reactive({
+  counter: 0
+})
+
 function show() {
-  alert(counter.value)
+  alert(data.counter);
 }
-/* 函数中要操作ref处理过的数据,需要通过.value形式 */
+
+/* 函数中要操作reactive处理过的数据,需要通过 对象名.属性名的方式 */
 let decr = () => {
-  counter.value--
+  data.counter--;
 }
 let incr = () => {
-  counter.value++
+  data.counter++;
 }
 </script>
 
 <template>
   <div>
-    <button @click="counter--">-</button>
+    <button @click="data.counter--">-</button>
     <button @click="decr()">-</button>
-    {{ counter }}
-    <button @click="counter++">+</button>
+    {{ data.counter }}
+    <button @click="data.counter++">+</button>
     <button @click="incr()">+</button>
-    <hr />
+    <hr>
     <button @click="show()">显示counter值</button>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
