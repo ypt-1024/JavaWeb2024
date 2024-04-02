@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
 
-import demo02 from './components/demo02.vue'
+import Demo03 from './components/demo03.vue'
 
-createApp(demo02).mount('#demo02')
+createApp(Demo03).mount('#demo03')
