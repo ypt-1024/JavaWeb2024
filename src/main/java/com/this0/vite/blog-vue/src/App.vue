@@ -4,16 +4,16 @@
   <div>
     <h1>App页面</h1>
     <hr />
-    <!-- 路由的连接 -->
+    <!-- 1. 路由跳转链接 -->
 
-    <router-link to="/">home页</router-link> <br />
+    <router-link to="/home">home页</router-link> <br />
     <router-link to="/list">list页</router-link> <br />
     <router-link to="/add">add页</router-link> <br />
     <router-link to="/update">update页</router-link> <br />
     <hr />
-    <!-- 路由连接对应视图的展示位置 -->
+    <!-- 2. 路由连接对应视图的展示位置 -->
     <hr />
-    默认展示位置:<router-view></router-view>
+    默认路由展示:<router-view></router-view>
     <hr />
     Home视图展示:<router-view name="homeView"></router-view>
     <hr />
