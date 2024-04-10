@@ -5,12 +5,10 @@ import { onUpdated,ref } from 'vue';
 let route =useRoute()
 let languageId = ref(0)
 let languageName = ref('')
+
 //  借助更新时生命周期,将数据更新进入响应式对象
 // onUpdated (()=>{
   // 获取对象中的参数(通过query获取参数,此时参数是key-value形式的)
-  console.log(route.query)
-  console.log(languageId.value)
-  console.log(languageName.value)
   languageId.value=route.query.id
   languageName.value=route.query.language
 
