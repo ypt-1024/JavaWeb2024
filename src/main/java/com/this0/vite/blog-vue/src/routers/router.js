@@ -14,7 +14,7 @@ const router = createRouter({
         {
             /* 此处:id  :language作为路径的占位符,传到视图页面 */
             path:'/showDetail/:id/:language',
-            /* 第二步，动态路由传参时,根据该名字showDetail找到该路由,跳转并带数据过去 */
+            /* 第二步，路由传参时,根据该名字showDetail找到该路由,跳转并带数据过去 */
             name:'showDetail',
             components:{
                 //格式路由的name：路由视图

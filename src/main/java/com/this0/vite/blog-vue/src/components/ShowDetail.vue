@@ -7,7 +7,7 @@
     let languageName = ref('')
     //  借助更新时生命周期,将数据更新进入响应式对象
     // onUpdated (()=>{
-        // 获取对象中的参数
+        // 第三步，获取路由对象中的参数，通过route.params.xx的方式获取，本身就是响应式数据
         languageId.value=route.params.id
         languageName.value=route.params.language
         console.log(languageId.value)
