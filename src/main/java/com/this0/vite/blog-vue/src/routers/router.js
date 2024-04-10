@@ -17,7 +17,7 @@ const router = createRouter({
             /* 第二步，路由传参时,根据该名字showDetail找到该路由,跳转并带数据过去 */
             name:'showDetail',
             components:{
-                //格式路由的name：路由视图
+                //格式    路由的name：路由视图
                 showDetailView:ShowDetail
             }
         },

@@ -5,14 +5,14 @@ import {useRouter} from 'vue-router'
 //创建动态路由对象
 let router = useRouter()
 
-//动态路由路径传参方法
+//方法2,第二步，通过绑定的路径传参方法，确定路由和参数
 let showDetail= (id,language)=>{
 
-  //路径传参有下面2种方式
-  // 1.1  使用拼接字符串方式传递路径参数，
-  // router.push(`showDetail/${id}/${languange}`)
-  // 1.2  或者  使用params，进行动态路由路径传参显示
-    router.push({name:"showDetail",params:{id:id,language:language}})
+  //动态路由路径传参有下面2种方式
+  // 1  使用拼接字符串方式传递路径参数，
+  router.push(`showDetail/${id}/${language}`)
+  // 2  或者  使用params，进行动态路由路径传参显示
+  //   router.push({name:"showDetail",params:{id:id,language:language}})
 }
 let showDetail2= (id,language)=>{
   /*uri键值对参数,需要使用query */
@@ -26,6 +26,7 @@ let showDetail2= (id,language)=>{
     <hr/>
     <!-- 方法1：路径传参 ，第一步，点击后根据router.js进行路由跳转  -->
     <router-link to="/showDetail/1/JAVA">showDetail路径传参显示JAVA</router-link>
+<!--    方法2： 动态路由路径传参 ,第一步，绑定传参方法-->
     <button @click="showDetail(1,'JAVA')">showDetail动态路由路径传参显示JAVA</button>
     <hr/>
     <!-- 键值对参数 -->
