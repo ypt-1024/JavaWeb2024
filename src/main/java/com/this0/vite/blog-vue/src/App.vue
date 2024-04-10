@@ -14,6 +14,8 @@ let showDetail= (id,language)=>{
   // 2  或者  使用params，进行动态路由路径传参显示
   //   router.push({name:"showDetail",params:{id:id,language:language}})
 }
+
+//方法4
 let showDetail2= (id,language)=>{
   /*uri键值对参数,需要使用query */
   router.push({path:"/showDetail2",query:{id:id,language:language}})
@@ -30,9 +32,12 @@ let showDetail2= (id,language)=>{
 <!--    方法2： 动态路由路径传参 ,第一步，绑定传参方法-->
     <button @click="showDetail(1,'JAVA')">showDetail动态路由路径传参显示JAVA</button>
     <hr/>
+
     <!-- 键值对参数2个方法 -->
 <!--    方法3-->
     <router-link v-bind:to="{path:'/showDetail2',query:{id:1,language:'Java'}}">showDetail2键值对传参显示JAVA</router-link>
+
+<!--    方法4-->
     <button @click="showDetail2(1,'JAVA')">showDetail2动态路由键值对传参显示JAVA</button>
     <hr>
     showDetail视图展示:<router-view name="showDetailView"></router-view>
