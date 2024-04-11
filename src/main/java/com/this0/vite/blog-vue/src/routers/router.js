@@ -42,10 +42,10 @@ router.beforeEach( (to,from,next) => {
 
 
     //需要判断，注意避免无限重定向
-    if(to.path == '/showDetail'){
+    if(to.path == '/showDetail/1/JAVA'){
         next()
     }else{
-        next('/showDetail')
+        next('/showDetail/1/JAVA')
     }
 
 } )
